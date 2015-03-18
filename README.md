@@ -7,7 +7,7 @@ Why?
 
 Example
 =======
-A simple example is included in this project named `example.html`.  The example takes a Flickr API Key and photoset id as parameters and displays the photoset on the page.
+A simple example is included in the file named `example.html`.  The example takes a Flickr API Key and photoset id as parameters and displays the photoset on the page.
 
 Usage
 =====
@@ -34,6 +34,25 @@ $('#photos').flickrPhotoset('<apiKey>', '<photosetId>')
 
 Options
 =======
+A number of options may be passed in to the `flickrPhotoset` call as the third parameter:
+
+Name | Description | Default
+---- | ----------- | -------
+before | HTML template placed before the jQuery element reference.  **{{url}}** may be be used to refer to the photoset url, while **{{title}}** may be used to insert the photoset name. | `<h3><a href="{{url}}">{{title}}</a></h3>`
+template | HTML template used for each photo in the set.  **{{link}}** may be used to refer to the link to the photo, **{{img}}** refers to the image itself, **{{title}}** is the image title. | `<a href="{{link}}" title="{{title}}"><img src="{{img}}_q.jpg" alt="{{title}}"/></a>`
+loading | A jQuery element that is displayed while the photoset is loading. | none
+
+Events
+======
+The jQuery element will fire an event named `photoset` when the photoset has been successfully loaded.  Example usage:
+
+``` javascript
+$('#photos').flickrPhotoset('<apiKey>', '<photosetId>').bind('photoset', function(evt, photos) {
+    console.dir(photos);
+});
+```
+
+Of course the listener does not need to be bound directly to the element itself, but could be bound to any parent element in the DOM - just the same as all jQuery events.
 
 History
 =======
