@@ -4,7 +4,7 @@ A jQuery plugin for rendering [Flickr](https://www.flickr.com/) photosets.
 
 Why?
 ====
-Many flickr/jquery plugins exist already, why create another one?  I was looking for something extremely simple that didn't require anything specific in the way of DOM elements, or any specific CSS to get things to work.  I also liked the idea of specifying the "layout" with HTML templates.
+Many flickr/jquery plugins exist already, why create another one?  I was looking for something extremely simple that didn't require anything specific in the way of DOM elements, or any specific CSS to get things to work.  I also liked the idea of specifying the "layout" with HTML templates.  This library does not require users to install any specific CSS, nor does it assume anything about the DOM layout surrounding the photoset element.
 
 Example
 =======
