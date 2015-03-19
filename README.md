@@ -40,7 +40,7 @@ A number of options may be passed in to the `flickrPhotoset` call as the third p
 Name | Description | Default
 ---- | ----------- | -------
 before | HTML template placed before the jQuery element reference.  **{{url}}** may be be used to refer to the photoset url, while **{{title}}** may be used to insert the photoset name. | `<h3><a href="{{url}}">{{title}}</a></h3>`
-template | HTML template used for each photo in the set.  **{{link}}** may be used to refer to the link to the photo, **{{img}}** refers to the image itself, **{{title}}** is the image title. | `<a href="{{link}}" title="{{title}}"><img src="{{img}}_q.jpg" alt="{{title}}"/></a>`
+template | HTML template used for each photo in the set.  **{{link}}** may be used to refer to the link to the photo, **{{img}}** refers to the image itself, **{{title}}** is the image title.  Also notice the '_q' used in the image source - this is the size of the image to display and is described in more detail in Flickr's documentation for [Photo Source URLs](https://www.flickr.com/services/api/misc.urls.html) | `<a href="{{link}}" title="{{title}}"><img src="{{img}}_q.jpg" alt="{{title}}"/></a>`
 loading | A jQuery element that is displayed while the photoset is loading. | none
 
 Events
