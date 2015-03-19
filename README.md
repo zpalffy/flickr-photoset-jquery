@@ -4,14 +4,15 @@ A jQuery plugin for rendering [Flickr](https://www.flickr.com/) photosets.
 
 Why?
 ====
+Many flickr/jquery plugins exist already, why create another one?  I was looking for something extremely simple that didn't require anything specific in the way of DOM elements, or any specific CSS to ge things to work.  I also liked the idea of specifying the "layout" with HTML templates.
 
 Example
 =======
-A simple example is included in the file named `example.html`.  The example takes a Flickr API Key and photoset id as parameters and displays the photoset on the page.
+A simple example is included in the file named `example.html`.  The example takes a [Flickr API Key](https://www.flickr.com/services/api/keys/) and photoset id as parameters and displays the photoset on the page.
 
 Usage
 =====
-To use the plugin, you will first need to acquire a unique Flickr API Key.  The API Key will be used on all calls to gather photos from the set and is required by the Flickr json api.
+To use the plugin, you will first need to acquire a unique [Flickr API Key](https://www.flickr.com/services/api/keys/).  The API Key will be used on all calls to gather photos from the set and is required by the Flickr json api.
 
 Next, download the script file and include it after jQuery has been included on the page, e.g.
 
@@ -48,7 +49,7 @@ The jQuery element will fire an event named `photoset` when the photoset has bee
 
 ``` javascript
 $('#photos').flickrPhotoset('<apiKey>', '<photosetId>').bind('photoset', function(evt, photos) {
-    console.dir(photos);
+    console.dir(photos); // lists the photoset json structure in the console
 });
 ```
 
