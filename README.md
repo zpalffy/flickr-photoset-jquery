@@ -18,7 +18,7 @@ Next, download the script file and include it after jQuery has been included on 
 
 ``` html
 <script src="/path/to/jquery.js"></script>
-<script src="flickr-photoset-jquery-<version>.js"></script>
+<script src="flickr-photoset-jquery.js"></script>
 ```
 
 Then either add a container element or create one dynamically that will contain the photos from the photoset:
