@@ -1,5 +1,5 @@
 /*****************************************************************************************
- * flickr-photoset-jquery
+ * flickr-photoset-jquery, 1.0
  * Developed by Eric Olson, https://github.com/zpalffy
  * Useage is explained here: https://github.com/zpalffy/flickr-photoset-jquery
  * License: The MIT License
