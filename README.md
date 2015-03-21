@@ -4,11 +4,11 @@ A jQuery plugin for rendering [Flickr](https://www.flickr.com/) photosets.
 
 Why?
 ====
-Many flickr/jquery plugins exist already, why create another one?  I was looking for something extremely simple that didn't require anything specific in the way of DOM elements, or any specific CSS to get things to work.  I also liked the idea of specifying the "layout" with HTML templates.  This library does not require users to install any specific CSS, nor does it assume anything about the DOM layout surrounding the photoset element.
+Many flickr/jquery plugins exist already, why create another one?  I was looking for something extremely simple that didn't require anything specific in the way of DOM elements, or any specific CSS that needed to be installed.  I also liked the idea of specifying the "layout" with HTML templates.  This library does not require users to install any specific CSS, nor does it assume anything about the DOM layout surrounding the photoset element.
 
 Example
 =======
-A simple example is included in the file named `example.html`.  The example takes a [Flickr API Key](https://www.flickr.com/services/api/keys/) and photoset id as parameters and displays the photoset on the page.
+[A simple example can be seen here](http://zpalffy.github.io/example-flickr-photoset-jquery.html) (source: https://github.com/zpalffy/zpalffy.github.io/blob/master/example-flickr-photoset-jquery.html).  The example takes a [Flickr API Key](https://www.flickr.com/services/api/keys/) and photoset id as parameters and displays the photoset on the page.
 
 Usage
 =====
@@ -39,9 +39,19 @@ A number of options may be passed in to the `flickrPhotoset` call as the third p
 
 Name | Description | Default
 ---- | ----------- | -------
-before | HTML template placed before the jQuery element reference.  **{{url}}** may be be used to refer to the photoset url, while **{{title}}** may be used to insert the photoset name. | `<h3><a href="{{url}}">{{title}}</a></h3>`
-template | HTML template used for each photo in the set.  **{{link}}** may be used to refer to the link to the photo, **{{img}}** refers to the image itself, **{{title}}** is the image title.  Also notice the '_q' used in the image source - this is the size of the image to display and is described in more detail in Flickr's documentation for [Photo Source URLs](https://www.flickr.com/services/api/misc.urls.html) | `<a href="{{link}}" title="{{title}}"><img src="{{img}}_q.jpg" alt="{{title}}"/></a>`
+before | HTML template placed before the jQuery element reference.  **{{url}}** may be be used to refer to the photoset url, while **{{title}}** may be used to insert the photoset name.  If the value is falsy, nothing is displayed. | `<h3><a href="{{url}}">{{title}}</a></h3>`
+template | HTML template used for each photo in the set.  **{{link}}** may be used to refer to the link to the photo, **{{img}}** refers to the image itself, **{{title}}** is the image title.  Also notice the '_q.jpg' used in the image source - this is the size of the image to display+extension and is described in more detail in Flickr's documentation for [Photo Source URLs](https://www.flickr.com/services/api/misc.urls.html)  If the value is falsy, nothing is displayed. | `<a href="{{link}}" title="{{title}}"><img src="{{img}}_q.jpg" alt="{{title}}"/></a>`
 loading | A jQuery element that is displayed while the photoset is loading. | none
+
+Example with all options specified:
+
+``` javascript
+$('#photos').flickrPhotoset('<apiKey>', '<photosetId>', {
+    loading: 'Loading...',
+    before: '<h1>{{title}}</h1>',
+    template: '<img src="{{img}}_t.jpg" />'
+});
+```
 
 Events
 ======
