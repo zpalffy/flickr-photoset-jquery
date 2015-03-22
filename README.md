@@ -8,7 +8,7 @@ Many flickr/jquery plugins exist already, why create another one?  I was looking
 
 Example
 =======
-[A simple example can be seen here](http://zpalffy.github.io/example-flickr-photoset-jquery.html) (source: https://github.com/zpalffy/zpalffy.github.io/blob/master/example-flickr-photoset-jquery.html).  The example takes a [Flickr API Key](https://www.flickr.com/services/api/keys/) and photoset id as parameters and displays the photoset on the page.
+[A simple example can be seen here](http://zpalffy.github.io/example-flickr-photoset-jquery.html) ([source](https://github.com/zpalffy/zpalffy.github.io/blob/master/example-flickr-photoset-jquery.html)).  The example takes a [Flickr API Key](https://www.flickr.com/services/api/keys/) and photoset id as parameters and displays the photoset on the page.
 
 Usage
 =====
